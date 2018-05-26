@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Alec Carper
+  email = aleccarper@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore_global
