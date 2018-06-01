@@ -18,8 +18,8 @@ floating_modifier $mod
 
 
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute 
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute 
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 10%+ unmute 
+bindsym XF86AudioLowerVolume exec amixer -q set Master 10%- unmute 
 bindsym XF86AudioMute exec amixer -q set Master mute 
 bindsym XF86AudioPlay exec playerctl play-pause 
 bindsym XF86AudioNext exec playerctl next
@@ -128,14 +128,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Application Startup
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id /usr/bin/vmware-user-suid-wrapper #for virutal machines
-exec --no-startup-id /usr/bin/lxqt-policykit-agent #auth requests
 exec --no-startup-id numlockx on
-exec --no-startup-id compton -f -b
-#exec --no-startup-id dropbox
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/moon.jpg
-#exec --no-startup-id xwinwrap -ov -ni -fs -- mpv -vo x11 -wid WID --keepaspect=no --loop ~/Pictures/wallpapers/waterfall.gif
+exec --no-startup-id redshift-gtk
+exec --no-startup-id /.fehbg
 
 # Window Config
 for_window [class="^.*"] border pixel 0
