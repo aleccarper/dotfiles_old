@@ -31,7 +31,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty -e tmux
 
 # launch dev browsers
 bindsym $mod+p exec qutebrowser localhost:4000
